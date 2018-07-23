@@ -1,0 +1,24 @@
+{
+	"bridge": {
+		"name": "Homebridge",
+		"username": "CE:66:55:E3:CB:33",
+		"port": 61822,
+		"pin": "000-11-000"
+	},
+	"description": "This is our Homebridge configuration file",
+	"plugins": [
+		"homebridge-mqtt-thermostat"
+	],
+	"accessories": [{
+		"accessory": "mqtt-nestthermostat",
+		"name": "Kitchen thermostat",
+		"url": "mqtt://10.0.1.10",
+		"username": "username",
+		"password": "password",
+		"caption": "Kitchen thermostat",
+		"topics": {
+			"set": "kitchen/",
+			"get": "kitchen/"
+		}
+	}]
+}
